@@ -1,7 +1,24 @@
 import { BsTypeH1 } from "react-icons/bs";
+import DetailDog from "../components/DetailDog";
+import Temperament from "../components/Temperament";
 
 const Detail = () => {
-  return <h1>Hej</h1>;
+  return (
+    <div>
+      <DetailDog />
+      <h1 className=" text-4xl font-medium mt-4 mb-4 ml-8">Dog Name</h1>
+      <Temperament />
+      <div className="mx-8 mb-4">
+        <h2 className="text-gray-500 text-2xs">Breed description</h2>
+        <p className="text-xl">lore ipsum dolor sit amet lore ipsum dolor sit amet lore ipsum dolor sit amet lore ipsum dolor sit amet lore ipsum dolor sit amet</p>
+      </div>
+
+      <div className="mx-8">
+        <h2 className="text-gray-500 text-2xs">Breed history</h2>
+        <p className="text-xl">lore ipsum dolor sit amet lore ipsum dolor sit amet lore ipsum dolor sit amet lore ipsum dolor sit amet lore ipsum dolor sit amet</p>
+      </div>
+    </div>
+  );
 };
 
 export default Detail;
