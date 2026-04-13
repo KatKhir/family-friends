@@ -5,7 +5,7 @@ import { GoPerson } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="mb-8">
       <nav className="flex gap-12 justify-center items-center text-4xl">
         <FiHome className="text-gray-400" />
         <FaRegStar className="text-gray-400" />
