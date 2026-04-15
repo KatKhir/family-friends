@@ -20,9 +20,11 @@ const FetchBreed = async () => {
 
   return breeds.map((breed) => {
     return (
-      <Link href={`/details/${breed.id}`}>
-        <Dog key={breed.id} breedGroup={breed.breed_group} origin={breed.origin} image={breed.image.url} />
-      </Link>
+      <div key={breed.id}>
+        <Link href={`/detailview/id/${breed.id}`}>
+          <Dog key={breed.id} breedGroup={breed.breed_group} origin={breed.origin} image={breed.image.url} />
+        </Link>
+      </div>
     );
   });
 };
