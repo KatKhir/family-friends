@@ -1,6 +1,6 @@
 import { BsTypeH1 } from "react-icons/bs";
-import DetailDog from "../../components/DetailDog";
-import Temperament from "../../components/Temperament";
+import DetailDog from "../../../components/DetailDog";
+import Temperament from "../../../components/Temperament";
 
 const Detail = () => {
   return (

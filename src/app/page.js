@@ -1,6 +1,6 @@
 import { discoverValidationDepths } from "next/dist/server/app-render/instant-validation/instant-validation";
-import SearchBar from "./components/Searchbar";
-import BreedList from "./components/BreedList";
+import SearchBar from "../components/Searchbar";
+import BreedList from "../components/BreedList";
 import { Suspense } from "react";
 
 export default function Home() {

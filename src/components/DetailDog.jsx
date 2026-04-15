@@ -8,12 +8,10 @@ const DetailDog = ({ image }) => {
     <div className="relative w-fit flex justify-center items-center mx-8">
       <FavoritElement />
       <GoBackArrow />
-      <div>
-        <Image src={image} alt="Picture of cats" width={500} height={500} className="rounded-4xl" />
-      </div>
-      <div className="absolute bottom-4 left-4">
-        <SmallDogBar />
-      </div>
+      {/* <div>
+        <Image src={image} alt="Picture of dog" width={500} height={500} className="rounded-4xl" />
+      </div> */}
+      <div className="absolute bottom-4 left-4">{/* <SmallDogBar /> */}</div>
     </div>
   );
 };
