@@ -1,19 +1,15 @@
 import Image from "next/image";
-import { FaRegStar } from "react-icons/fa";
-import { IoIosArrowBack } from "react-icons/io";
+import FavoritElement from "./FavoritElement";
 import SmallDogBar from "./SmallDogBar";
+import GoBackArrow from "./GoBackArrow";
 
-const DetailDog = () => {
+const DetailDog = ({ image }) => {
   return (
     <div className="relative w-fit flex justify-center items-center mx-8">
-      <div className="absolute top-2 right-2 bg-white/35 rounded-full w-12 h-12 flex items-center justify-center ">
-        <FaRegStar className="text-white text-3xl" />
-      </div>
-      <div className="absolute top-2 left-2 bg-white/35 rounded-full w-12 h-12 flex items-center justify-center">
-        <IoIosArrowBack className="text-3xl" />
-      </div>
+      <FavoritElement />
+      <GoBackArrow />
       <div>
-        <Image src="https://placecats.com/neo/300/200" alt="Picture of cats" width={500} height={500} className="rounded-4xl" />
+        <Image src={image} alt="Picture of cats" width={500} height={500} className="rounded-4xl" />
       </div>
       <div className="absolute bottom-4 left-4">
         <SmallDogBar />
