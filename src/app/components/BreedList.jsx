@@ -1,16 +1,30 @@
 import Dog from "./Dog";
+import Link from "next/link";
 
 const BreedList = () => {
   return (
     <>
-      <Dog />
-      <Dog />
-      <Dog />
-      <Dog />
-      <Dog />
-      <Dog />
+      <FetchBreed />
     </>
   );
+};
+
+const FetchBreed = async () => {
+  "use server";
+  const response = await fetch("https://api.thedogapi.com/v1/breeds", {
+    headers: {
+      "x-api-key": process.env.API_KEY,
+    },
+  });
+  const breeds = await response.json();
+
+  return breeds.map((breed) => {
+    return (
+      <Link href={`/details/${breed.id}`}>
+        <Dog key={breed.id} breedGroup={breed.breed_group} origin={breed.origin} image={breed.image.url} />
+      </Link>
+    );
+  });
 };
 
 export default BreedList;

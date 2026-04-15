@@ -3,12 +3,18 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
 
+  cacheComponents: true,
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "placecats.com",
-        pathname: "/neo/**",
+        hostname: "storage.googleapis.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn4.thedogapi.com",
+        pathname: "/**",
       },
     ],
   },
