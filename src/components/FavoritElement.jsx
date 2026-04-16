@@ -17,7 +17,7 @@ const FavoritElement = ({ id, breed }) => {
         <FaRegStar
           className="text-white text-3xl"
           onClick={() => {
-            setFavorites(id, breed);
+            setFavorites(id);
           }}
         />
       </div>
