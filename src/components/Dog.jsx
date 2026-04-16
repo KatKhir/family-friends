@@ -6,7 +6,7 @@ const Dog = ({ id, breedGroup, origin, image }) => {
   return (
     <div className="bg-white w-55 rounded-2xl mb-5 pb-3 shadow-md overflow-hidden">
       <div className="relative w-fit">
-        <FavoritElement />
+        <FavoritElement id={id} />
         <Link href={`/detailview/${id}`}>
           <Image src={image} alt="Picture of dog" width={220} height={220} className="w-full h-auto rounded-2xl" />
         </Link>

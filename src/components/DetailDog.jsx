@@ -3,10 +3,10 @@ import FavoritElement from "./FavoritElement";
 import SmallDogBar from "./SmallDogBar";
 import GoBackArrow from "./GoBackArrow";
 
-const DetailDog = ({ image }) => {
+const DetailDog = ({ image, id }) => {
   return (
     <div className="relative w-fit flex justify-center items-center mx-8">
-      <FavoritElement />
+      <FavoritElement id={id} />
       <GoBackArrow />
       <div>
         <Image src={image} alt="Picture of dog" width={500} height={500} className="rounded-4xl" />
