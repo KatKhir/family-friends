@@ -1,18 +1,20 @@
 import Dog from "./Dog";
 import Link from "next/link";
 
-const BreedList = () => {
+const BreedList = ({ searchParams }) => {
   return (
     <>
-      <FetchBreed />
+      <FetchBreed searchParams={searchParams} />
     </>
   );
 };
 
-const FetchBreed = async () => {
+const FetchBreed = async ({ searchParams }) => {
   "use server";
+  const { query } = await searchParams;
+  const url = query ? `https://api.thedogapi.com/v1/breeds/search?q=${query}` : "https://api.thedogapi.com/v1/breeds";
   try {
-    const response = await fetch("https://api.thedogapi.com/v1/breeds", {
+    const response = await fetch(url, {
       headers: {
         "x-api-key": process.env.API_KEY,
       },
